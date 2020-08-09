@@ -6,8 +6,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import sample.RMI.MyRemote;
 
-public class Main extends Application {
+import java.rmi.RemoteException;
+
+public class StartApplication extends Application implements MyRemote {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -21,8 +24,8 @@ public class Main extends Application {
 
     }
 
-
-    public static void main(String[] args) {
-        launch(args);
+    @Override
+    public void startApp() throws RemoteException {
+        launch();
     }
 }
