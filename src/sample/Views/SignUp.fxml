@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #21020F; " xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.SignUpController">
+   <children>
+      <ImageView fitHeight="447.0" fitWidth="809.0" layoutX="-3.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Abstract.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="762.0" layoutY="6.0" onMouseClicked="#closeWindow" prefHeight="26.0" prefWidth="21.0" text="X" textFill="#6f5f5f">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="73.0" prefHeight="30.0" prefWidth="311.0" text="Have an Account?">
+         <font>
+            <Font name="Quicksand Regular" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="119.0" text="Log in with credentials">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="29.0" layoutY="159.0" onMouseClicked="#logIn" prefHeight="26.0" prefWidth="100.0" text="Sign In" />
+      <VBox layoutX="396.0" layoutY="42.0" prefHeight="334.0" prefWidth="311.0">
+         <children>
+            <Label text="Sign Up">
+               <VBox.margin>
+                  <Insets left="105.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tf_username" promptText="User Name" unFocusColor="#00b1f1" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Quicksand Bold" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tf_email" focusColor="#33758a" prefHeight="35.0" prefWidth="311.0" promptText="Email" unFocusColor="#00b1f1">
+               <font>
+                  <Font name="Quicksand Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXPasswordField fx:id="pf_password" focusColor="#33758a" prefHeight="32.0" prefWidth="267.0" promptText="Password" unFocusColor="#00b1f1" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Quicksand Bold" size="13.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton onMouseClicked="#createAccount" prefHeight="26.0" prefWidth="310.0" text="Create Account">
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" top="30.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Label layoutX="739.0" layoutY="-5.0" onMouseClicked="#min" prefHeight="49.0" prefWidth="23.0" text="-">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
